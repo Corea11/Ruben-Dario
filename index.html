@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubén Darío - El Príncipe de las Letras</title>
+    
+    <!-- Tailwind CSS para un diseño moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fuentes elegantes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Lora', serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .parchment { background-color: #fdfaf6; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="parchment text-stone-900 antialiased">
+
+    <!-- Navegación -->
+    <nav class="bg-stone-900 text-stone-100 py-4 sticky top-0 z-50 shadow-md">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <span class="text-xl font-bold tracking-tighter">RUBÉN DARÍO</span>
+            <div class="space-x-4">
+                <a href="#video" class="hover:text-amber-400 transition text-sm uppercase tracking-widest text-white">Video</a>
+                <a href="#transcripcion" class="hover:text-amber-400 transition text-sm uppercase tracking-widest border-l border-stone-700 pl-4 text-white">Texto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Encabezado -->
+    <header class="bg-stone-900 text-stone-50 pt-20 pb-32 px-6 text-center border-b-8 border-amber-700">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Félix Rubén García Sarmiento</h1>
+            <p class="text-xl md:text-2xl italic text-stone-400">"El Poeta que Modernizó la Lengua Española"</p>
+        </div>
+    </header>
+
+    <!-- Contenido -->
+    <main class="max-w-4xl mx-auto px-6 -mt-16">
+        
+        <!-- Video -->
+        <section id="video" class="mb-20">
+            <div class="video-container border-8 border-white bg-white">
+                <iframe 
+                    src="https://www.youtube.com/embed/-ee-4BVpIZk" 
+                    title="Video de Rubén Darío" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Transcripción -->
+        <section id="transcripcion" class="bg-white p-8 md:p-16 rounded-xl shadow-sm border border-stone-200 mb-20">
+            <div class="flex items-center gap-4 mb-12 border-b pb-6">
+                <i class="fas fa-feather-alt text-4xl text-amber-700"></i>
+                <h2 class="text-4xl font-bold text-stone-900">Transcripción y Análisis</h2>
+            </div>
+
+            <div class="space-y-12 text-lg text-stone-800">
+                <article>
+                    <h3 class="text-2xl font-bold mb-3 text-amber-800">00:00 - Introducción</h3>
+                    <p>Félix Rubén García Sarmiento, nacido en Nicaragua, es la figura más influyente de la poesía en español del siglo XX. El video explora su infancia en León y su ascenso como el "Príncipe de las Letras".</p>
+                </article>
+
+                <div class="p-8 bg-amber-50 border-l-8 border-amber-700 rounded-r-lg italic text-2xl text-stone-700">
+                    "Juventud, divino tesoro, ¡ya te vas para no volver! Cuando quiero llorar, no lloro... y a veces lloro sin querer..."
+                </div>
+
+                <article>
+                    <h3 class="text-2xl font-bold mb-3 text-amber-800">El Impacto de 'Azul...'</h3>
+                    <p>El documental destaca 1888 como el año clave. Con la publicación de su libro <strong>Azul...</strong> en Chile, Rubén Darío da inicio formal al Modernismo, renovando el léxico y la musicalidad del idioma español.</p>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-stone-900 text-stone-500 py-16 text-center border-t border-stone-800">
+        <p class="text-stone-300 mb-2 tracking-widest uppercase text-sm font-bold">Rubén Darío Inmortal</p>
+        <p class="text-xs">&copy; 2026 | Proyecto de Difusión Literaria | HTML5 & Tailwind CSS</p>
+    </footer>
+
+</body>
+</html>
