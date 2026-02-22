@@ -4,192 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rubén Darío - Orgullo de Nicaragua</title>
-    
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Fuentes: Playfair para títulos (elegante) y Inter para lectura -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Iconos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-
     <style>
-        :root {
-            --nic-blue: #0067b1; /* Azul de la bandera de Nicaragua */
-        }
-        body { font-family: 'Inter', sans-serif; }
+        :root { --nic-blue: #0067b1; }
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        
-        .bg-nic-flag {
-            background: linear-gradient(180deg, var(--nic-blue) 0%, var(--nic-blue) 33%, #ffffff 33%, #ffffff 66%, var(--nic-blue) 66%, var(--nic-blue) 100%);
-            opacity: 0.1;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-        }
-
         .hero-gradient {
             background: linear-gradient(to bottom, rgba(0, 103, 177, 0.95), rgba(0, 50, 90, 1));
         }
-
-        .video-card {
-            box-shadow: 0 20px 50px rgba(0, 103, 177, 0.3);
-            border: 4px solid white;
-        }
-
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 20px 50px rgba(0, 103, 177, 0.3);
+            border: 4px solid white;
         }
         .video-container iframe {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            top: 0; left: 0; width: 100%; height: 100%;
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 antialiased">
+<body>
 
-    <!-- Header / Hero Section con colores de Nicaragua -->
-    <header class="relative hero-gradient text-white pt-24 pb-40 px-6 overflow-hidden">
-        <!-- Decoración de fondo sutil -->
-        <div class="absolute inset-0 opacity-10 pointer-events-none flex items-center justify-center">
-            <i class="fas fa-quill text-[20rem] -rotate-12"></i>
-        </div>
-
-        <div class="max-w-4xl mx-auto relative z-10 text-center">
-            <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full text-sm font-semibold mb-6">
-                <span class="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></span>
-                Nicaragua en el Corazón
+    <!-- Header con los colores de Nicaragua -->
+    <header class="hero-gradient text-white pt-24 pb-40 px-6 text-center relative overflow-hidden">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="inline-block bg-white/20 backdrop-blur-md border border-white/30 px-4 py-1 rounded-full text-xs font-bold mb-6 uppercase tracking-widest">
+                Príncipe de las Letras
             </div>
-            <h1 class="text-5xl md:text-7xl font-black mb-6 tracking-tight drop-shadow-lg">
-                Rubén Darío
-            </h1>
-            <p class="text-xl md:text-2xl font-light italic text-blue-100 max-w-2xl mx-auto">
-                "Si pequeña es la Patria, uno grande la sueña."
-            </p>
+            <h1 class="text-6xl md:text-8xl font-black mb-6 drop-shadow-2xl">Rubén Darío</h1>
+            <p class="text-xl md:text-2xl italic text-blue-100 italic">"Si pequeña es la Patria, uno grande la sueña."</p>
         </div>
     </header>
 
-    <!-- Contenido Principal -->
     <main class="max-w-5xl mx-auto px-6 -mt-24 relative z-20 pb-20">
-        
-        <!-- Tarjeta del Video -->
-        <section id="video" class="mb-20">
-            <div class="video-card rounded-2xl overflow-hidden bg-black">
-                <div class="video-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/-ee-4BVpIZk" 
-                        title="Rubén Darío - El Poeta de Nicaragua" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
+        <!-- Video Section -->
+        <section class="mb-16">
+            <div class="video-container bg-black">
+                <iframe src="https://www.youtube.com/embed/-ee-4BVpIZk" frameborder="0" allowfullscreen></iframe>
             </div>
         </section>
 
-        <!-- Sección de Transcripción Estilizada -->
-        <section id="transcripcion" class="grid md:grid-cols-3 gap-10">
-            
-            <!-- Columna Izquierda: Información Rápida -->
-            <div class="md:col-span-1 space-y-6">
-                <div class="bg-blue-600 p-8 rounded-2xl text-white shadow-xl shadow-blue-200">
-                    <h3 class="text-xl font-bold mb-4 border-b border-blue-400 pb-2 italic">Ficha Técnica</h3>
-                    <ul class="space-y-4 text-sm text-blue-50">
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-birthday-cake opacity-70"></i>
-                            <span>18 de Enero, 1867</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-map-marker-alt opacity-70"></i>
-                            <span>Metapa, Nicaragua</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <i class="fas fa-star opacity-70"></i>
-                            <span>Padre del Modernismo</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm italic text-slate-600 text-center">
-                    "La música de las palabras es el alma de la poesía."
+        <!-- Transcripción Section -->
+        <section class="grid md:grid-cols-3 gap-8">
+            <div class="md:col-span-1">
+                <div class="bg-blue-600 p-8 rounded-2xl text-white shadow-xl">
+                    <h3 class="text-xl font-bold mb-4 border-b border-blue-400 pb-2 italic">Nicaragua</h3>
+                    <p class="text-sm opacity-90 leading-relaxed">Honrando al máximo exponente del modernismo, nacido en Metapa, hoy Ciudad Darío.</p>
                 </div>
             </div>
-
-            <!-- Columna Derecha: Transcripción -->
-            <div class="md:col-span-2 glass-effect p-8 md:p-12 rounded-3xl shadow-xl border border-white">
-                <div class="flex items-center gap-4 mb-10">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xl shadow-inner">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h2 class="text-3xl font-bold text-slate-800">Análisis del Video</h2>
-                </div>
-
-                <div class="space-y-12">
-                    <!-- Bloque de Texto 1 -->
-                    <div class="relative pl-8 border-l-2 border-blue-200">
-                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
-                        <h4 class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-2">Introducción y Orígenes</h4>
-                        <p class="text-slate-700 leading-relaxed text-lg">
-                            El video profundiza en los orígenes humildes de Rubén Darío en Nicaragua, destacando cómo su entorno y su prodigiosa inteligencia lo llevaron a ser reconocido como el "Poeta Niño". Su capacidad para transformar el dolor en belleza es el eje central de su inicio literario.
-                        </p>
-                    </div>
-
-                    <!-- Bloque de Texto 2 -->
-                    <div class="relative pl-8 border-l-2 border-blue-200 text-lg">
-                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
-                        <h4 class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-2">El Movimiento Modernista</h4>
-                        <p class="text-slate-700 leading-relaxed">
-                            Se explica la revolución que significó <strong>Azul...</strong>. Rubén Darío no solo escribió versos; él reinventó el idioma español, dotándolo de una musicalidad y elegancia que no existía anteriormente, fusionando influencias francesas con el sentimiento latinoamericano.
-                        </p>
-                    </div>
-
-                    <!-- Bloque de Texto 3 -->
-                    <div class="relative pl-8 border-l-2 border-blue-200">
-                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-white"></div>
-                        <h4 class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-2">Legado Inmarcesible</h4>
-                        <p class="text-slate-700 leading-relaxed text-lg">
-                            Finalmente, el documental rinde tributo a su fallecimiento en León, dejando un legado que une a toda la comunidad hispanohablante bajo una misma bandera cultural. Rubén Darío sigue siendo, hoy y siempre, el orgullo máximo de Nicaragua.
-                        </p>
-                    </div>
+            <div class="md:col-span-2 bg-white p-10 rounded-2xl shadow-xl border border-slate-100">
+                <h2 class="text-3xl font-bold mb-6 text-slate-800 flex items-center gap-3">
+                    <i class="fas fa-feather-alt text-blue-600"></i> Análisis del Video
+                </h2>
+                <div class="space-y-6 text-slate-600 leading-relaxed text-lg">
+                    <p>El video presenta una visión profunda sobre la vida de Rubén Darío, desde su infancia hasta su consolidación en Chile con la publicación de <strong>Azul...</strong>.</p>
+                    <p>La estética de esta página refleja los colores de nuestra bandera, simbolizando el orgullo nacional que representa su obra para todos los nicaragüenses.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Pie de Página Estilizado -->
-    <footer class="bg-slate-900 text-white py-16 px-6">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="flex justify-center gap-4 mb-8">
-                <div class="w-12 h-1 bg-blue-500"></div>
-                <div class="w-12 h-1 bg-white"></div>
-                <div class="w-12 h-1 bg-blue-500"></div>
-            </div>
-            <p class="text-slate-400 text-sm mb-4 uppercase tracking-[0.3em]">Patria y Poesía</p>
-            <h2 class="text-2xl font-bold mb-8">Rubén Darío Inmortal</h2>
-            <div class="flex justify-center gap-6 text-2xl mb-12">
-                <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-instagram"></i></a>
-            </div>
-            <p class="text-xs text-slate-600 border-t border-slate-800 pt-8">
-                &copy; 2026 Homenaje Digital | Creado con orgullo desde Nicaragua
-            </p>
+    <footer class="bg-slate-900 text-white py-12 text-center">
+        <div class="flex justify-center gap-2 mb-4">
+            <div class="w-8 h-1 bg-blue-600"></div>
+            <div class="w-8 h-1 bg-white"></div>
+            <div class="w-8 h-1 bg-blue-600"></div>
         </div>
+        <p class="text-sm text-slate-400 tracking-widest uppercase">Rubén Darío Inmortal &bull; Nicaragua</p>
     </footer>
 
 </body>
